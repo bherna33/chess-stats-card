@@ -73,6 +73,69 @@ fetch('https://api.chess.com/pub/player/magnuscarlsen/stats')
   });
 
 
+  // api/card.js
+import fetch from 'node-fetch';
+
+export default async function handler(req, res) {
+  const { username = 'magnuscarlsen' } = req.query;
+
+  const statsRes = await fetch(`https://api.chess.com/pub/player/${username}/stats`);
+  if (!statsRes.ok) {
+    res.status(404).send('Player not found');
+    return;
+  }
+
+  const stats = await statsRes.json();
+
+  const modes = ['chess_daily', 'chess_rapid', 'chess_blitz', 'chess_bullet'];
+
+  let rows = '';
+  for (const mode of modes) {
+    if (stats[mode]) {
+      const rating = stats[mode].last.rating;
+      rows += `<tspan x="20" dy="1.2em">${mode.replace('chess_', '')}: ${rating}</tspan>`;
+    }
+  }
+
+  // if (stats.tactics) {
+  //   rows += `<tspan x="20" dy="1.2em">Tactics: ${stats.tactics.highest.rating}</tspan>`;
+  // }
+
+  // if (stats.puzzle_rush) {
+  //   rows += `<tspan x="20" dy="1.2em">Puzzle Rush: ${stats.puzzle_rush.best.score}</tspan>`;
+  // }
+
+  const svg = `
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      fill: #333;
+    }
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+      fill: #000;
+    }
+    rect {
+      fill: #f9f9f9;
+      stroke: #ccc;
+      rx: 10;
+      ry: 10;
+    }
+  </style>
+  <rect x="0" y="0" width="100%" height="100%" />
+  <text x="20" y="30" class="title">${username}'s Chess Stats</text>
+  <text x="20" y="60">${rows}</text>
+</svg>`;
+
+  res.setHeader('Content-Type', 'image/svg+xml');
+  res.status(200).send(svg);
+}
+
+
+
 // getPlayerStats();
 // getPlayerInfo("dual-shock514");
 

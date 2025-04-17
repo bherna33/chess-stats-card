@@ -1,141 +1,34 @@
-async function getPlayerStats(username) {
-    const response = await fetch(`https://api.chess.com/pub/player/${username || 'magnuscarlsen'}/stats`);
-    const playerStats = await response.json();
+const express = require('express');
+const axios = require('axios');
+const ejs = require('ejs');
 
-    const modes = ['chess_daily', 'chess_rapid', 'chess_blitz', 'chess_bullet'];
-    
-    for (const mode of modes) {
-        if (playerStats[mode]) {
-            const rating = playerStats[mode].last.rating;
-            console.log(`${mode}: ${rating}`);
-        }
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Template engine setup
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+
+// Route to generate Chess card
+app.get('/api/chess', async (req, res) => {
+    const username = req.query.username || 'magnuscarlsen';  // Default to Magnus Carlsen's username
+    const apiUrl = `https://api.chess.com/pub/player/${username}`;
+
+    try {
+        // Fetch player data from Chess.com API
+        const { data } = await axios.get(apiUrl);
+
+        const { username: playerName, status, avatar, rating } = data;
+
+        // Create an SVG card using EJS template
+        res.set('Content-Type', 'image/svg+xml');
+        res.render('card', { playerName, status, avatar, rating });
+    } catch (error) {
+        res.status(500).send('Error fetching Chess.com data');
     }
+});
 
-}
-
-async function getPlayerInfo(username) {
-    const response = await fetch(`https://api.chess.com/pub/player/${username || 'magnuscarlsen'}`);
-    const playerInfo = await response.json();
-    console.log(playerInfo.username, playerInfo.avatar, playerInfo.url);
-}
-
-function generateChessStatsSVG(username, stats) {
-    const modes = ['chess_daily', 'chess_rapid', 'chess_blitz', 'chess_bullet'];
-
-    let rows = '';
-    for (const mode of modes) {
-        if (stats[mode]) {
-            const rating = stats[mode].last.rating;
-            rows += `<tspan x="20" dy="1.2em">${mode.replace("chess_", "")}: ${rating}</tspan>`;
-        }
-    }
-
-    if (stats.tactics) {
-        rows += `<tspan x="20" dy="1.2em">Tactics: ${stats.tactics.highest.rating}</tspan>`;
-    }
-
-    // if (stats.puzzle_rush) {
-    //     rows += `<tspan x="20" dy="1.2em">Puzzle Rush: ${stats.puzzle_rush.best.score}</tspan>`;
-    // }
-
-    return `
-<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    text {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      fill: #333;
-    }
-    .title {
-      font-size: 16px;
-      font-weight: bold;
-      fill: #000;
-    }
-    rect {
-      fill: #f9f9f9;
-      stroke: #ccc;
-      rx: 10;
-      ry: 10;
-    }
-  </style>
-  <rect x="0" y="0" width="100%" height="100%" />
-  <text x="20" y="30" class="title">${username}'s Chess Stats</text>
-  <text x="20" y="60">${rows}</text>
-</svg>`;
-}
-
-fetch('https://api.chess.com/pub/player/magnuscarlsen/stats')
-  .then(res => res.json())
-  .then(stats => {
-    const svg = generateChessStatsSVG('magnuscarlsen', stats);
-    console.log(svg);
-    // You can write this to a file or serve it on a web page!
-  });
-
-
-  // api/card.js
-import fetch from 'node-fetch';
-
-export default async function handler(req, res) {
-  const { username = 'magnuscarlsen' } = req.query;
-
-  const statsRes = await fetch(`https://api.chess.com/pub/player/${username}/stats`);
-  if (!statsRes.ok) {
-    res.status(404).send('Player not found');
-    return;
-  }
-
-  const stats = await statsRes.json();
-
-  const modes = ['chess_daily', 'chess_rapid', 'chess_blitz', 'chess_bullet'];
-
-  let rows = '';
-  for (const mode of modes) {
-    if (stats[mode]) {
-      const rating = stats[mode].last.rating;
-      rows += `<tspan x="20" dy="1.2em">${mode.replace('chess_', '')}: ${rating}</tspan>`;
-    }
-  }
-
-  // if (stats.tactics) {
-  //   rows += `<tspan x="20" dy="1.2em">Tactics: ${stats.tactics.highest.rating}</tspan>`;
-  // }
-
-  // if (stats.puzzle_rush) {
-  //   rows += `<tspan x="20" dy="1.2em">Puzzle Rush: ${stats.puzzle_rush.best.score}</tspan>`;
-  // }
-
-  const svg = `
-<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    text {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      fill: #333;
-    }
-    .title {
-      font-size: 16px;
-      font-weight: bold;
-      fill: #000;
-    }
-    rect {
-      fill: #f9f9f9;
-      stroke: #ccc;
-      rx: 10;
-      ry: 10;
-    }
-  </style>
-  <rect x="0" y="0" width="100%" height="100%" />
-  <text x="20" y="30" class="title">${username}'s Chess Stats</text>
-  <text x="20" y="60">${rows}</text>
-</svg>`;
-
-  res.setHeader('Content-Type', 'image/svg+xml');
-  res.status(200).send(svg);
-}
-
-
-
-// getPlayerStats();
-// getPlayerInfo("dual-shock514");
-
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});

@@ -13,8 +13,10 @@ export default async function handler(req, res) {
           .default { fill: gray; }
           .label { font-weight: bold; }
         </style>
-  
-        <rect fill="gray" width="100%" height="100%" rx="15" ry="15" class="default" />
+
+        <a href="${playerInfo.url}" target="_blank">
+            <rect width="100%" height="100%" rx="15" ry="15" class="default" />
+        </a>
         <text style="font: bold 20px sans-serif; fill:black;" x="20" y="30">${username}'s Chess Profile</text>
   
         <text x="20" y="60" class="label">Rapid:</text>
@@ -32,7 +34,7 @@ export default async function handler(req, res) {
         <text x="20" y="160" class="label">League:</text>
         <text x="80" y="160">${playerInfo.league ?? "N/A"}</text>
   
-        <image width="75" height="75" x="170" y="65" href="${playerInfo.avatar}" alt="avatar" />
+        <image width="75" height="75" x="170" y="65" href="${playerInfo.avatar ? await getBase64Image(playerInfo.avatar) : "" }" alt="avatar" />
       </svg>
     `;
   
@@ -40,4 +42,11 @@ export default async function handler(req, res) {
     res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
     res.status(200).send(svg);
   }
-  
+
+async function getBase64Image(url) {
+    const response = await fetch(url);
+    const arrayBuffer = await response.arrayBuffer();
+    const base64 = Buffer.from(arrayBuffer).toString('base64');
+    const contentType = response.headers.get('content-type');
+    return `data:${contentType};base64,${base64}`;
+}

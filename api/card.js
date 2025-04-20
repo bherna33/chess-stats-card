@@ -1,5 +1,10 @@
+const themes = require('./themes');
+
 export default async function handler(req, res) {
-    const { username = "magnuscarlsen" } = req.query;
+
+    const { username = "magnuscarlsen", theme = "dark" } = req.query;
+    const selectedTheme = themes[theme] || themes["dark"];
+
   
     const statsURL = await fetch(`https://api.chess.com/pub/player/${username}/stats`);
     const playerURL = await fetch(`https://api.chess.com/pub/player/${username}`);
@@ -10,12 +15,12 @@ export default async function handler(req, res) {
     const svg = `
       <svg width="420" height="200" xmlns="http://www.w3.org/2000/svg">
         <style>
-          .default { fill: gray; }
+          .default { fill: ${selectedTheme.background}; }
           .label { font-weight: bold; }
         </style>
 
         <a href="${playerInfo.url}" target="_blank">
-            <rect width="100%" height="100%" rx="15" ry="15" class="default" />
+            <rect width="100%" height="100%" rx="10" ry="10" class="default" />
         </a>
         <text style="font: bold 20px sans-serif; fill:black;" text-anchor="middle" x="210" y="30">${username}'s Chess Profile</text>
   

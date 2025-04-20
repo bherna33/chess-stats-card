@@ -2,8 +2,8 @@ const themes = require('./themes');
 
 export default async function handler(req, res) {
 
-    const { user = "magnuscarlsen", theme = "dark" } = req.query;
-    const selectedTheme = themes[theme] || themes["dark"];
+    const { user = "magnuscarlsen", theme = "default" } = req.query;
+    const selectedTheme = themes[theme] || themes["default"];
 
     const statsURL = await fetch(`https://api.chess.com/pub/player/${user}/stats`);
     const playerURL = await fetch(`https://api.chess.com/pub/player/${user}`);

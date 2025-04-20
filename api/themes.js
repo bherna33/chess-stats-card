@@ -369,7 +369,6 @@ export const themes = {
         textColor: "#ADBAC7",
         border: "#373E47",
         background: "#24292F",
-        
       },
     discord_old_blurple: {
         titleColor: "#7289DA",
@@ -440,7 +439,6 @@ export const themes = {
         textColor: "#ffffff",
         border: "#0c1a25",
         background: "#09131B",
-        
       },
     rose_pine: {
         titleColor: "#9ccfd8",

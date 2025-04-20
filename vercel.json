@@ -1,0 +1,10 @@
+{
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://github.com/bherna33/chess-stats-card",
+        "permanent": false
+      }
+    ]
+  }
+  

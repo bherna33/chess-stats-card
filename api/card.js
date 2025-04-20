@@ -1,4 +1,4 @@
-const themes = require('./themes');
+import { themes } from "./themes.js";
 
 export default async function handler(req, res) {
 

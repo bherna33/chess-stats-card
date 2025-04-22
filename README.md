@@ -26,20 +26,14 @@ The user field is the only required option. All other fields are optional.
 
 All cards themes are set to default by default. Here are a few themes that you can do. 
 
-| | | |
-| :---: | :---: | :---: |
-| `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) | `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) | `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) |
-| `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) | `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) | `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) |
-| `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) | `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) | `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) |
-
-
-| | |
-| :---: | :---: | 
-| `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) | `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) |
-| `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) | `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) |
-| `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) | `tokyonight` ![tokyonight](./docs/card/tokyonight.svg) |
 
 <details>
 <summary> All themes </summary>
-imma get to it later.
+Imma do the rest later
+
+| | |
+| :---: | :---: | 
+| `default` ![default](./docs/cards/default.svg) | `transparent` ![transparent](./docs/cards/transparent.svg) |
+| `shadow_red` ![shadow_red](./docs/cards/shadow_red.svg) | `shadow_green` ![shadow_green](./docs/cards/shadow_green.svg) |
+
 </details>

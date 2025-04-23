@@ -11,28 +11,28 @@ export const themes = {
         iconColor: "#0579C3",
         textColor: "#417E87",
         border: "#e4e2e2",
-        background: "ff#ffff00",
+        background: "#ffffff00",
       },
     shadow_red: {
         titleColor: "#9A0000",
         textColor: "#444",
         iconColor: "#4F0000",
         border: "#4F0000",
-        background: "ff#ffff00",
+        background: "#ffffff00",
       },
     shadow_green: {
         titleColor: "#007A00",
         textColor: "#444",
         iconColor: "#003D00",
         border: "#003D00",
-        background: "ff#ffff00",
+        background: "#ffffff00",
       },
     shadow_blue: {
         titleColor: "#00779A",
         textColor: "#444",
         iconColor: "#004450",
         border: "#004490",
-        background: "ff#ffff00",
+        background: "#ffffff00",
       },
     dark: {
         titleColor: "#fff",
@@ -385,8 +385,8 @@ export const themes = {
         background: "#252334",
       },
     panda: {
-        titleColor: "19#f9d899",
-        iconColor: "19#f9d899",
+        titleColor: "#f9d899",
+        iconColor: "#f9d899",
         textColor: "#FF75B5",
         border: "#e4e2e2",
         background: "#31353a",
@@ -510,12 +510,604 @@ export const themes = {
         border: "#e1bc29",
         background: "#2b2d40",
       },
-    // ambient_gradient: {
-    //     titleColor: "#ffffff",
-    //     textColor: "#ffffff",
-    //     iconColor: "#ffffff",
-    //     background: "35,4158d0,c850c0,#ffcc70",
-    //   },
+    halloween: {
+        background: "#1C1A2B",
+        border: "#FFC400",
+        iconColor: "#FDEF49",
+        titleColor: "#FB9600",
+        textColor: "#FFC400",
+      },
+    blood:  {
+        background: "#FFF",
+        border: "#A8A8A8",
+        iconColor: "#357291",
+        textColor: "#FF5F5F",
+        titleColor: "#FF5F5F",
+      },
+
+    youtube_dark: {
+        background: "#0F0F0F",
+        border: "#272727",
+        iconColor: "#FFFFFF",
+        textColor: "#FF0000",
+        titleColor: "#FFFFFF",
+      },
+
+      dawnfox:  {
+        background: "#FAF4ED",
+        border: "#E5E9F0",
+        iconColor: "#618774",
+        textColor: "#286983",
+        titleColor: "#575279",
+      },
+
+      javascript_dark:  {
+        background: "#000000",
+        border: "#F7DF1E",
+        textColor: "#FFFFFF",
+        iconColor: "#F7DF1E",
+        titleColor: "#F7DF1E",
+      },
+
+      nightfox: {
+        background: "#192330",
+        border: "#393B44",
+        iconColor: "#81B29A",
+        textColor: "#719CD6",
+        titleColor: "#DFDFE0",
+      },
+
+      earth:  {
+        background: "#1E1615",
+        border: "#BA9D6F",
+        iconColor: "#C48519",
+        textColor: "#639E29",
+        titleColor: "#C48519",
+      },
+
+      soft_green: {
+        background: "#222428",
+        border: "#E4E2E2",
+        iconColor: "#00DC4D",
+        textColor: "#00DC4D",
+        titleColor: "#00DC4D",
+      },
+
+      leafy:  {
+        background: "#081C15",
+        border: "#ABCDEF",
+        textColor: "#FF5400",
+        iconColor: "#ABCDEF",
+        titleColor: "#FF5400",
+      },
+
+      submarine_flowers:  {
+        background: "#013E4E",
+        border: "#013E4E",
+        iconColor: "#FF8888",
+        textColor: "#FFF000",
+        titleColor: "#FFF000",
+      },
+
+      onedark_duo:  {
+        background: "#0000",
+        border: "#A8A8A8",
+        iconColor: "#E4BF7A",
+        textColor: "#8EB573",
+        titleColor: "#8EB573",
+      },
+
+      monokai_metallian:  {
+        background: "#1F222E",
+        border: "#FFFFFF",
+        iconColor: "#FC9867",
+        textColor: "#F8D8669",
+        titleColor: "#F85D7F",
+      },
+
+      tokyonight_duo: {
+        background: "#0000",
+        border: "#A8A8A8",
+        iconColor: "#70A5FD",
+        textColor: "#BF91F3",
+        titleColor: "#BF91F3",
+      },
+
+      whatsapp_light: {
+        background: "#FFFFFF",
+        border: "#E4E2E2",
+        iconColor: "#121B22",
+        textColor: "#16D351",
+        titleColor: "#121B22",
+      },
+
+      catppuccin_macchiato: {
+        background: "#24273A",
+        border: "#E4E2E2",
+        iconColor: "#8BD5CA",
+        textColor: "#C6A0F6",
+        titleColor: "#C6A0F6",
+      },
+
+      black_ice:  {
+        background: "#151515",
+        border: "#E4E2E2",
+        iconColor: "#00E7FF",
+        textColor: "#FFF",
+        titleColor: "#00E7FF",
+      },
+
+      rust_ferris_dark: {
+        background: "#000000",
+        border: "#FFFFFF",
+        iconColor: "#F66200",
+        textColor: "#F49600",
+        titleColor: "#F49600",
+      },
+
+      microsoft:  {
+        background: "#FFFFFF",
+        border: "#737373",
+        iconColor: "#F25022",
+        textColor: "#00A4EF",
+        titleColor: "#00A4EF",
+      },
+
+      codestackr: {
+        background: "#09131B",
+        border: "#E4E2E2",
+        iconColor: "#FF652F",
+        textColor: "#FFE400",
+        titleColor: "#FFE400",
+      },
+
+      microsoft_dark: {
+        background: "#000000",
+        border: "#737373",
+        iconColor: "#F25022",
+        textColor: "#00A4EF",
+        titleColor: "#00A4EF",
+      },
+
+      taiga:  {
+        background: "#031B1B",
+        border: "#062E2F",
+        iconColor: "#1FBABE",
+        textColor: "#1FBABE",
+        titleColor: "#1F8F92",
+      },
+
+      dayfox: {
+        background: "#F6F2EE",
+        border: "#F2E9E1",
+        iconColor: "#396847",
+        textColor: "#2848A9",
+        titleColor: "#352C24",
+      },
+
+      violet_punch: {
+        background: "#000000",
+        border: "#E4E2E2",
+        iconColor: "#D0DDAD",
+        textColor: "#CB0B45",
+        titleColor: "#AFB5DD",
+      },
+
+      highcontrast: {
+        background: "#000000",
+        border: "#BEBEBE",
+        iconColor: "#FB8C00",
+        textColor: "#FFFFFF",
+        titleColor: "#FB8C00",
+      },
+
+      modern_lilac: {
+        background: "#0A0E12",
+        border: "#1C1E26",
+        iconColor: "#5D417A",
+        textColor: "#FAB795",
+        titleColor: "#FAB795",
+      },
+
+      modern_lilac2:  {
+        background: "#0A0E12",
+        border: "#1C1E26",
+        iconColor: "#5D417A",
+        textColor: "#FFFFFF",
+        titleColor: "#FFFFFF",
+      },
+
+      burnt_neon: {
+        background: "#0D1117",
+        border: "#98989A",
+        iconColor: "#622B53",
+        textColor: "#FF6906",
+        titleColor: "#01FED1",
+      },
+
+      sea:  {
+        background: "#1565C0",
+        border: "#FFFFFF",
+        iconColor: "#FFFFFF",
+        textColor: "#FFFFFF",
+        titleColor: "#FFFFFF",
+      },
+
+      hacker_inverted:  {
+        background: "#20C20E",
+        border: "#000000",
+        iconColor: "#000000",
+        textColor: "#000000",
+        titleColor: "#000000",
+      },
+
+      neon_blurange:  {
+        background: "#030D6B",
+        border: "#C7CCFF",
+        iconColor: "#FB750B",
+        textColor: "#25FB88",
+        titleColor: "#25FB88",
+      },
+
+      elegant:  {
+        background: "#03071E",
+        border: "#ABCDEF",
+        textColor: "#ABCDEF",
+        iconColor: "#E85D04",
+        titleColor: "#ABCDEF",
+      },
+
+      shadow_orange:  {
+        background: "#FFFFFF00",
+        border: "#834400",
+        iconColor: "#BB5502",
+        textColor: "#EC861A",
+        titleColor: "#BB5502",
+      },
+
+      holi_theme: {
+        background: "#030314",
+        border: "#85A4C0",
+        textColor: "#5FABEE",
+        iconColor: "#D6E7FF",
+        titleColor: "#D6E7FF",
+      },
+
+      blux: {
+        background: "#263D46",
+        border: "#E4E2E2",
+        iconColor: "#28ECFA",
+        textColor: "#28ECFA",
+       titleColor: "#28ECFA",
+      },
+
+      meta_light: {
+        background: "#FFFFFF",
+        border: "#1C2B33",
+        iconColor: "#006EE9",
+        textColor: "#1C2B33",
+        titleColor: "#1C2B33",
+      },
+
+      windows_dark: {
+        background: "#000000",
+        border: "#00A4EF",
+        iconColor: "#00A4EF",
+        textColor: "#00A4EF",
+        titleColor: "#00A4EF",
+      },
+
+      hacker: {
+        background: "#000000",
+        border: "#20C20E",
+        iconColor: "#20C20E",
+        textColor: "#20C20E",
+        titleColor: "#20C20E",
+      },
+
+      green_nur:  {
+        background: "#0A1E17",
+        border: "#E4E2E2",
+        iconColor: "#5AFFC8",
+        textColor: "#5AFFC8",
+        titleColor: "#5AFFC8",
+      },
+
+      rising_sun: {
+        background: "#0C1116",
+        border: "#E4E3E3",
+        textColor: "#FFFFFF",
+        iconColor: "#F6882B",
+        titleColor: "#FFF7ED",
+      },
+
+      material: {
+        background: "#263238",
+        border: "#E4E2E2",
+        iconColor: "#80CBC4",
+        textColor: "#FFAB91",
+        titleColor: "#FFAB91",
+      },
+
+      shadow_brown: {
+        background: "#FFFFFF00",
+        border: "#31312D",
+        iconColor: "#7D6642",
+        textColor: "#BB9863",
+        titleColor: "#7D6642",
+      },
+
+      git_dark: {
+        background: "#000000",
+        border: "#F05033",
+        iconColor: "#F05033",
+        textColor: "#F05033",
+        titleColor: "#F05033",
+      },
+
+      github_light: {
+        background: "#FFFFFF",
+        border: "#39D353",
+        textColor: "#39D353",
+        iconColor: "#39D353",
+        titleColor: "#24292F",
+      },
+
+      gruvbox_duo:  {
+        background: "#0000",
+        border: "#A8A8A8",
+        iconColor: "#FABD2F",
+        textColor: "#FE8019",
+        titleColor: "#FE8019",
+      },
+
+      nordfox:  {
+        background: "#2E3440",
+        border: "#3B4252",
+        iconColor: "#A3BE8C",
+        textColor: "#81A1C1",
+        titleColor: "#E5E9F0",
+      },
+
+      buefy_dark: {
+        background: "#1A1B27",
+        border: "#E4E2E2",
+        iconColor: "#7957D5",
+        textColor: "#FF3860",
+        titleColor: "#FF3860",
+      },
+
+      blueberry_duo:  {
+        background: "#0000",
+        border: "#E4E2E2",
+        iconColor: "#82AAFF",
+        textColor: "#89DDFF",
+        titleColor: "#89DDFF",
+      },
+
+      humoris:  {
+        background: "#DFAF77",
+        border: "#E8E6E4",
+        iconColor: "#191419",
+        textColor: "#191419",
+        titleColor: "#393C3C",
+      },
+
+      horizon:  {
+        background: "#1C1E26",
+        border: "#1C1E26",
+        iconColor: "#E95678",
+        textColor: "#59E1E3",
+        titleColor: "#23BD87",
+      },
+
+      whatsapp_light2:  {
+        background: "#FFFFFF",
+        border: "#D8FDD2",
+        iconColor: "#767B7D",
+        textColor: "#1DAB61",
+        titleColor: "#131A20",
+      },
+
+      neon_dark:  {
+        background: "#020200",
+        border: "#A8A8A8",
+        iconColor: "#E41D44",
+        textColor: "#F9DD3C",
+        titleColor: "#F9DD3C",
+      },
+
+      rust_ferris_light:  {
+        background: "#FFFFFF",
+        border: "#000000",
+        iconColor: "#F66200",
+        textColor: "#F49600",
+        titleColor: "#F49600",
+      },
+
+      iceberg:  {
+        background: "#1E2132",
+        border: "#33374C",
+        iconColor: "#84A0C6",
+        textColor: "#D2D4DE",
+        titleColor: "#D2D4DE",
+      },
+
+      telegram: {
+        background: "#FFFFFF",
+        border: "#333333",
+        iconColor: "#179CDE",
+        textColor: "#179CDE",
+        titleColor: "#179CDE",
+      },
+
+      icegray:  {
+        background: "#FFFFFF",
+        border: "#515151",
+        iconColor: "#969696",
+        textColor: "#3C3C3C",
+        titleColor: "#515151",
+      },
+
+      navy_gear:  {
+        background: "#000021",
+        border: "#FFFFFF",
+        iconColor: "#1FA0DD",
+        textColor: "#C3DD00",
+        titleColor: "#C3DD00",
+      },
+
+      deepblue: {
+        background: "#165795",
+        border: "#BA9D6F",
+        iconColor: "#1CD577",
+        textColor: "#639E29",
+        titleColor: "#0FDD21",
+      },
+
+      duskfox:  {
+        background: "#232136",
+        border: "#393552",
+        iconColor: "#A3BE8C",
+        textColor: "#569FBA",
+        titleColor: "#E0DEF4",
+      },
+
+      java_dark:  {
+        background: "#000000",
+        border: "#F89820",
+        iconColor: "#F89820",
+        textColor: "#5382A1",
+        titleColor: "#F89820",
+      },
+
+      github_green_purple:  {
+        background: "#000",
+        border: "#000",
+        iconColor: "#7FFF00",
+        textColor: "#800080",
+        titleColor: "#800080",
+      },
+
+      github_dark_blue: {
+        background: "#0D1117",
+        border: "#E4E2E2",
+        iconColor: "#58A6FF",
+        textColor: "#FEFEFE",
+        titleColor: "#FEFEFE",
+      },
+
+      terafox:  {
+        background: "#152528",
+        border: "#2F3239",
+        iconColor: "#7AA4A1",
+        textColor: "#5A93AA",
+        titleColor: "#EBEBEB",
+      },
+
+      python_dark:  {
+        background: "#000000",
+        border: "#4B8BBE",
+        iconColor: "#FFD43B",
+        textColor: "#4B8BBE",
+        titleColor: "#FFD43B",
+      },
+
+      dark_smoky: {
+        background: "#0B0C10",
+        border: "#C5C6C7",
+        iconColor: "#EDF5E1",
+        textColor: "#66FCF1",
+        titleColor: "#66FCF1",
+      },
+
+      deuteranopia_friendly_theme:  {
+        background: "#000000",
+        border: "#E4E2E2",
+        iconColor: "#E69F00",
+        textColor: "#56B4E9",
+        titleColor: "#0072B2",
+      },
+
+      blood_dark: {
+        background: "#142B37",
+        border: "#E4E2E2",
+        iconColor: "#357291",
+        textColor: "#FF5F5F",
+        titleColor: "#FF5F5F",
+      },
+
+      android_dark: {
+        background: "#000000",
+        border: "#3DDC84",
+        iconColor: "#3DDC84",
+        textColor: "#3DDC84",
+        titleColor: "#3DDC84",
+      },
+
+      carbonfox:  {
+        background: "#161616",
+        border: "#282828",
+        iconColor: "#25BE6A",
+        textColor: "#78A9FF",
+        titleColor: "#DFDFE0",
+      },
+
+      catppuccin_frappe:  {
+        background: "#303446",
+        border: "#E4E2E2",
+        iconColor: "#81C8BE",
+        textColor: "#CA9EE6",
+        titleColor: "#CA9EE6",
+      },
+
+      whatsapp_dark2: {
+        background: "#0B141B",
+        border: "#103629",
+        iconColor: "#858A8D",
+        textColor: "#21C063",
+        titleColor: "#F7F8FA",
+      },
+
+      meta_dark:  {
+        background: "#1C2B33",
+        border: "#FFFFFF",
+        iconColor: "#006EE9",
+        textColor: "#FFFFFF",
+        titleColor: "#FFFFFF",
+      },
+
+      violet_dark:  {
+        background: "#000000",
+        border: "#FF0089",
+        iconColor: "#FF0089",
+        textColor: "#FF0089",
+        titleColor: "#FF0089",
+      },
+
+      sea_dark: {
+        background: "#00C0FF",
+        border: "#000000",
+        iconColor: "#000000",
+        textColor: "#000000",
+        titleColor: "#000000"
+      },
+
+      dark_minimalist:  {
+        background: "#211F27",
+        border: "#B9B9C0",
+        iconColor: "#D484F4",
+        textColor: "#89B4FA",
+        titleColor: "#89B4FA",
+      },
+
+      travelers_theme:  {
+        background: "#150E1F",
+        border: "#E4E2E2",
+        iconColor: "#F28157",
+        textColor: "#F2F2F2",
+        titleColor: "#F2F2F2",
+      },
 };
 
 export default themes;

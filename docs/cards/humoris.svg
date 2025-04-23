@@ -3,19 +3,19 @@
             <style>
                 text{
                     font-family: Segoe UI;
-                    fill:#434d58;
+                    fill:#191419;
                 }
                 .border {
-                    fill: #e4e2e2;
+                    fill: #E8E6E4;
                 }
                 .background {
-                    fill: #fffefe;
+                    fill: #DFAF77;
                 }
                 .label {
                     font-weight: bold;
                 }
                 .title{
-                    fill: #2f80ed;
+                    fill: #393C3C;
                     font-size: 20px;
                     font-weight: bold;
                 }

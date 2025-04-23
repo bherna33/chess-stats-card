@@ -99,7 +99,7 @@ All cards themes are set to `default` by default. Here are a few themes that you
 | `duskfox` ![duskfox](./docs/cards/duskfox.svg) | `java_dark` ![java_dark](./docs/cards/java_dark.svg) |
 | `github_green_purple` ![github_green_purple](./docs/cards/github_green_purple.svg) | `github_dark_blue` ![github_dark_blue](./docs/cards/github_dark_blue.svg) |
 | `terafox` ![terafox](./docs/cards/terafox.svg) | `python_dark` ![python_dark](./docs/cards/python_dark.svg) |
-| `dark_smoky` ![dark_smoky](./docs/cards/dark_smoky.svg) | `deuteranopia_friendly_theme` ![deuteranopia_friendly_theme](./docs/cards/deuteranopia_friendly_theme.svg) |
+| `dark_smoky` ![dark_smoky](./docs/cards/dark_smoky.svg) | `deuteranopia_friend` ![deuteranopia_friend](./docs/cards/deuteranopia_friend.svg) |
 | `blood_dark` ![blood_dark](./docs/cards/blood_dark.svg) | `android_dark` ![android_dark](./docs/cards/android_dark.svg) |
 | `carbonfox` ![carbonfox](./docs/cards/carbonfox.svg) | `catppuccin_frappe` ![catppuccin_frappe](./docs/cards/catppuccin_frappe.svg) |
 | `whatsapp_dark2` ![whatsapp_dark2](./docs/cards/whatsapp_dark2.svg) | `meta_dark` ![meta_dark](./docs/cards/meta_dark.svg) |

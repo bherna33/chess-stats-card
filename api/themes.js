@@ -1021,7 +1021,7 @@ export const themes = {
         titleColor: "#66FCF1",
       },
 
-      deuteranopia_friendly_theme:  {
+      deuteranopia_friend:  {
         background: "#000000",
         border: "#E4E2E2",
         iconColor: "#E69F00",

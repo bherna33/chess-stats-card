@@ -7,7 +7,7 @@ export default async function handler(request, response) {
         theme = "default",
         width = 420,
         height = 200,
-        avatar = true,
+        avatar = "true",
         textColor = "",
         titleColor = "",
         borderColor = "",

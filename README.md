@@ -11,7 +11,9 @@
 ![Chess stats card](https://chess-stats-card.vercel.app/api/card?user=username)
 ```
 
-It is recommended to self-host the project more better reliability. See Deploying it on your own for more details.
+It is recommended to self-host the project more better reliability. 
+
+<!-- See Deploying it on your own for more details. -->
 
 ## 🔧 Options
 

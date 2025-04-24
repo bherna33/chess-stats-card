@@ -1,8 +1,8 @@
 import { themes } from "./themes.js";
 
-export default async function handler(req, res) {
+export default async function handler(request, response) {
 
-    const { user = "magnuscarlsen", theme = "default" } = req.query;
+    const { user = "magnuscarlsen", theme = "default" } = request.query;
     const selectedTheme = themes[theme] || themes["default"];
 
     const statsURL = await fetch(`https://api.chess.com/pub/player/${user}/stats`);
@@ -59,9 +59,9 @@ export default async function handler(req, res) {
         </svg>
     `;
 
-    res.setHeader("Content-Type", "image/svg+xml");
-    res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
-    res.status(200).send(svg);
+    response.setHeader("Content-Type", "image/svg+xml");
+    response.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
+    response.status(200).send(svg);
 }
 
 async function getBase64Image(url) {

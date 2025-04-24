@@ -17,12 +17,23 @@ It is recommended to self-host the project more better reliability.
 
 ## 🔧 Options
 
-The user field is the only required option. All other fields are optional.
+The `user` field is the only required option. All other fields are optional. To add additional field add `&[parameter]` to the link.
 
-| Parameter | Type     | Description                                                              | Example           |
-| :-------: | :------: | :----------------------------------------------------------------------- | :---------------: |
-|`user`     | `string` | Your Chess.com username                                                  | magnuscarlsen     |
-|`theme`    | `string` | Card theme – available themes: light, dark, midnight, [etc...](#-themes) | &theme=ocean_dark |
+| Parameter     | Type      | Description                                                              | Example             |
+| :-----------: | :-------: | :----------------------------------------------------------------------- | :-----------------: |
+| `user`        | `string`  | Your Chess.com username                                                  | magnuscarlsen       |
+| `theme`       | `string`  | Card theme – available themes: light, dark, midnight, [etc...](#-themes) | theme=ocean_dark    |
+| `width`       | `float`   | Width of the card                                                        | width=420           |
+| `height`      | `float`   | Height of the card                                                       | height=200          |
+| `avatar`      | `boolean` | Toggle profile picture from Chess.com. `true` by default                 | avatar=false        |
+| `textColor`   | `string`  | HEX or named color for body text                                         | textColor=#ffffff   |
+| `titleColor`  | `string`  | HEX or named color for the title                                         | titleColor=#00ff00  |
+| `borderColor` | `string`  | HEX or named color for the border                                        | borderColor=#000000 |
+| `bgColor`     | `string`  | HEX or named color for the card background                               | bgColor=#1a1a1a     |
+
+
+> **Note**: If you provide `textColor`, `titleColor`, `borderColor`, or `bgColor`, they will override the colors set by the selected `theme`.
+
 
 ## 🎨 Themes
 

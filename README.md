@@ -142,3 +142,13 @@ All cards themes are set to `default` by default. Here are a few themes that you
 | `dark_minimalist` ![dark_minimalist](./docs/cards/dark_minimalist.svg) | `travelers_theme` ![travelers_theme](./docs/cards/travelers_theme.svg) |
 
 </details>
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request if you have a way to improve this project.
+
+Make sure your request is meaningful and you have tested the app locally before submitting a pull request.
+
+## Support
+
+If you like this project, give it a ⭐ and share it with friends!

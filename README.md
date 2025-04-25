@@ -11,13 +11,27 @@
 ![Chess stats card](https://chess-stats-card.vercel.app/api/card?user=username)
 ```
 
-It is recommended to self-host the project more better reliability. 
+It is recommended to self-host the project for better reliability. 
+
+## 🃏 Available Cards
+
+Here are the different types of cards you can generate:
+
+| Card Name   | Endpoint    | Description                         | Card |
+|------------ |-------------|-------------------------------------| ---- |
+| `Card`      | `/api/card` | General profile stats card          | ![Card](./docs/cards/default.svg) |
+| `Game Card` | `/api/game` | Shows stats for a specific game mode (requires [gameMode](#-additional-options-for-game-card)) | ![Game Card](./docs/game/game.svg) |
+
 
 <!-- See Deploying it on your own for more details. -->
 
 ## 🔧 Options
 
-The `user` field is the only required option. All other fields are optional. To add additional field add `&[parameter]` to the link.
+> ⚠️ **Important**: Make sure to include the ? before your first parameter, or your options won’t be applied.
+
+Example: `https://chess-stats-card.vercel.app/api/card?user=username`
+
+The `user` field is the only required option for all cards. All other fields are optional. To add additional field add `&[parameter]` to the link.
 
 | Parameter     | Type      | Description                                                              | Example             |
 | :-----------: | :-------: | :----------------------------------------------------------------------- | :-----------------: |
@@ -33,6 +47,14 @@ The `user` field is the only required option. All other fields are optional. To 
 
 
 > **Note**: If you provide `textColor`, `titleColor`, `borderColor`, or `bgColor`, they will override the colors set by the selected `theme`.
+
+### 🎮 Additional Options for `Game Card`
+
+| Parameter     | Type     | Description                                                | Example                |
+| :-----------: | :------: | :--------------------------------------------------------- | :--------------------: |
+| `gameMode`    | `string` | Game mode to show stats for (**required for `gamecard`**) | gameMode=chess_blitz  |
+
+> Valid `gameMode` values: `chess_rapid`, `chess_blitz`, `chess_bullet`, `chess960_daily` and `chess_daily`.
 
 
 ## 🎨 Themes

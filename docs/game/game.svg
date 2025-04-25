@@ -1,0 +1,56 @@
+
+        <svg width="420" height="220" xmlns="http://www.w3.org/2000/svg">
+            <style>
+                text{
+                    font-family: Segoe UI;
+                    fill:#434d58;
+                }
+                .border{
+                    fill: #e4e2e2;
+                }
+                .background{
+                    fill: #fffefe;
+                }
+                .label{
+                    font-weight: bold;
+                }
+                .title{
+                    fill: #2f80ed;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                .number{
+                    font-size: 35px;
+                    font-weight: bold;
+                }
+            </style>
+
+            <a href="https://www.chess.com/member/Hikaru" target="_blank">
+                <rect width="100%" height="100%" rx="5" ry="5" class="border" />
+                <rect width="417" height="217" rx="5" ry="5" x="1.5" y="1.5" class="background" />
+            </a>
+
+            <text class="title" text-anchor="middle" x="210" y="30"> Chess Blitz </text>
+
+            <text x="80" y="60" text-anchor="middle" class="label" >Highest Rating</text>
+            <text x="80" y="110" text-anchor="middle" class="number" >3405</text>
+            <text x="80" y="145" text-anchor="middle" >2/9/2024</text>
+    
+            <text x="210" y="60" text-anchor="middle" class="label">Rating</text>
+            <text x="210" y="110" text-anchor="middle" class="number" >3300</text>
+            <text x="210" y="145" text-anchor="middle" >4/20/2025</text>
+
+            <text x="340" y="60" text-anchor="middle" class="label">Total Games</text>
+            <text x="340" y="110" text-anchor="middle" class="number" >39633</text>
+            <text x="340" y="145" text-anchor="middle" >4/20/2025</text>
+
+            <line x1="7%" y1="190" x2="68%" y2="190" stroke-linecap="round" style="stroke:green;stroke-width:12" />
+            <line x1="80%" y1="190" x2="93%" y2="190" stroke-linecap="round" style="stroke:gray;stroke-width:12" />
+            <line x1="68%" y1="190" x2="80%" y2="190" style="stroke:red;stroke-width:12" />
+
+            <text x="7%" y="180" >30613</text>
+            <text x="68%" y="180" >5046</text>
+            <text x="93%" y="180" text-anchor="end" >3974</text>
+
+        </svg>
+    

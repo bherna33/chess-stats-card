@@ -67,7 +67,7 @@ export default async function handler(request, response) {
             <text x="100" y="135">${playerStats.chess_bullet?.last?.rating ?? "N/A"}</text>
 
             <text x="20" y="160" class="label">Puzzle:</text>
-            <text x="100" y="160">${playerInfo.tactics?.highest?.rating ?? "N/A"}</text>
+            <text x="100" y="160">${playerStats.tactics?.highest?.rating ?? "N/A"}</text>
 
             <text x="20" y="185" class="label" >League:</text>
             <text x="100" y="185" >${playerInfo.league ?? "N/A"}</text>

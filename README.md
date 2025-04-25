@@ -18,7 +18,7 @@ It is recommended to self-host the project for better reliability.
 Here are the different types of cards you can generate:
 
 | Card Name   | Endpoint    | Description                         | Card   |
-| :---------: | :-----------| :-----------------------------------| :----: |
+| :--------- | :-----------| :-----------------------------------| :----: |
 | `Card`      | `/api/card` | General profile stats card          | ![Card](./docs/cards/default.svg) |
 | `Game Card` | `/api/game` | Shows stats for a specific game mode (requires [gameMode](#-additional-options-for-game-card)) | ![Game Card](./docs/game/game.svg) |
 

@@ -17,8 +17,8 @@ It is recommended to self-host the project for better reliability.
 
 Here are the different types of cards you can generate:
 
-| Card Name   | Endpoint    | Description                         | Card |
-|------------ |-------------|-------------------------------------| ---- |
+| Card Name   | Endpoint    | Description                         | Card   |
+| :---------: | :-----------| :-----------------------------------| :----: |
 | `Card`      | `/api/card` | General profile stats card          | ![Card](./docs/cards/default.svg) |
 | `Game Card` | `/api/game` | Shows stats for a specific game mode (requires [gameMode](#-additional-options-for-game-card)) | ![Game Card](./docs/game/game.svg) |
 
@@ -27,7 +27,7 @@ Here are the different types of cards you can generate:
 
 ## 🔧 Options
 
-> ⚠️ **Important**: Make sure to include the ? before your first parameter, or your options won’t be applied.
+> ⚠️ **Important**: Make sure to include `?` before your first parameter, or your options won’t be applied.
 
 Example: `https://chess-stats-card.vercel.app/api/card?user=username`
 
